@@ -1,4 +1,8 @@
 # AI-CHATBOT
+
+OUTPUT:
+<img width="1910" height="1032" alt="Image" src="https://github.com/user-attachments/assets/48046ef2-5e4c-4577-8c97-9b799cb05999" />
+
 ## Chatbot Using Python and HTML – Description
 
 A Chatbot using Python and HTML is an intelligent web-based application designed to interact with users through natural language conversations. The primary goal of the chatbot is to provide automated responses to user queries, making communication faster, more efficient, and available 24/7. Chatbots are widely used in customer support, educational platforms, e-commerce websites, healthcare systems, and virtual assistant applications.
