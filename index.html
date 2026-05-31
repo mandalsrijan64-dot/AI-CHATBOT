@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RuleBot — Rule-Based Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">R</div>
+        <div>
+          <div class="brand-name">RuleBot</div>
+          <div class="brand-sub">Rule-Based Engine</div>
+        </div>
+      </div>
+
+      <div class="section-label">CAPABILITIES</div>
+      <ul class="capability-list">
+        <li><span class="cap-dot"></span>Greetings & Farewells</li>
+        <li><span class="cap-dot"></span>Math Operations</li>
+        <li><span class="cap-dot"></span>General Knowledge</li>
+        <li><span class="cap-dot"></span>Time & Date</li>
+        <li><span class="cap-dot"></span>Jokes & Fun</li>
+        <li><span class="cap-dot"></span>Help & FAQ</li>
+      </ul>
+
+      <div class="section-label" style="margin-top:auto">TRY ASKING</div>
+      <ul class="sample-list" id="sampleList">
+        <li onclick="fillInput(this)">Hello!</li>
+        <li onclick="fillInput(this)">What is 12 * 7?</li>
+        <li onclick="fillInput(this)">Tell me a joke</li>
+        <li onclick="fillInput(this)">What time is it?</li>
+        <li onclick="fillInput(this)">What is Python?</li>
+        <li onclick="fillInput(this)">Help</li>
+      </ul>
+    </aside>
+
+    <!-- Main chat area -->
+    <main class="chat-area">
+      <header class="chat-header">
+        <div class="status-dot"></div>
+        <span>RuleBot is active</span>
+        <button class="clear-btn" onclick="clearChat()">Clear Chat</button>
+      </header>
+
+      <div class="messages" id="messages">
+        <div class="msg bot">
+          <div class="avatar bot-av">R</div>
+          <div class="bubble">
+            👋 Hi! I'm <strong>RuleBot</strong>, a rule-based chatbot.<br/>
+            I use pattern matching and predefined rules to respond.<br/>
+            Ask me anything — try the suggestions on the left!
+          </div>
+        </div>
+      </div>
+
+      <div class="input-bar">
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Type your message…"
+          onkeydown="if(event.key==='Enter') sendMessage()"
+          autocomplete="off"
+        />
+        <button onclick="sendMessage()" id="sendBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>
